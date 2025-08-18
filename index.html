@@ -11,11 +11,20 @@
             margin: 0; 
             padding: 0;
         }
+        .icono-esquina {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 48px; /* puedes ajustar el tamaño */
+            height: 48px;
+            z-index: 100;
+        }
         header { 
             background: #222; 
             color: #fff; 
             padding: 20px 0; 
             text-align: center; 
+            position: relative;
         }
         main { 
             padding: 20px; 
@@ -36,6 +45,11 @@
     </style>
 </head>
 <body>
+    <img 
+        src="https://cdn-icons-png.flaticon.com/512/11009/11009785.png"
+        alt="Icono Amor Propio"
+        class="icono-esquina"
+    >
     <header>
         <h1>Bienvenido a Mi Página Web</h1>
     </header>
