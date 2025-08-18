@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Página</title>
+    <meta charset="UTF-8">
+    <title>Como estas?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial; text-align: center; margin-top: 50px; }
-        h1 { color: #0066cc; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+            margin: 0; 
+            padding: 0;
+        }
+        header { 
+            background: #222; 
+            color: #fff; 
+            padding: 20px 0; 
+            text-align: center; 
+        }
+        main { 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: #fff; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer { 
+            background: #222; 
+            color: #fff; 
+            text-align: center; 
+            padding: 10px 0; 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+        }
     </style>
 </head>
 <body>
-    <h1>¡Hola desde GitHub Pages!</h1>
-    <p>Esta página se creó directamente en GitHub.</p>
+    <header>
+        <h1>Bienvenido a Mi Página Web</h1>
+    </header>
+    <main>
+        <h2>Sobre mí</h2>
+        <p>Esta es una página de ejemplo creada con HTML y CSS.</p>
+        <h3>Secciones principales</h3>
+        <ul>
+            <li>Inicio</li>
+            <li>Acerca de</li>
+            <li>Contacto</li>
+        </ul>
+    </main>
+    <footer>
+        &copy; 2025 Mi Página Web
+    </footer>
 </body>
 </html>
