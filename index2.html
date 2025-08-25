@@ -99,6 +99,18 @@
       width: 60%;
       border-radius: 2px;
     }
+    /* Estilo para el nuevo texto debajo del separador */
+    .song-text {
+      font-family: 'Merriweather', serif;
+      font-size: 1.1em;
+      max-width: 360px;
+      margin: 20px 0 40px 0;
+      line-height: 1.6;
+      white-space: pre-line;  /* para respetar saltos de línea */
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      text-align: center;
+      color: #ffd6e3;
+    }
     @media screen and (max-width: 480px) {
       h1 {
         font-size: 2em;
@@ -132,6 +144,11 @@
       .separator {
         width: 80%;
       }
+      .song-text {
+        max-width: 90%;
+        font-size: 1em;
+        margin: 15px 0 25px;
+      }
     }
   </style>
 </head>
@@ -160,7 +177,29 @@
     <!-- Separador moderado -->
     <hr class="separator" />
 
-    <!-- Aquí podrías seguir escribiendo más contenido debajo -->
+    <!-- Nuevo texto debajo del separador -->
+    <p class="song-text">
+Como dice una cancion que me se,  Yo que pensé que nunca iba a estar
+Enamorado de nadie más
+Y de repente
+Yo te encontré a ti
+Nadie es perfecto, llegué a decir
+Hasta que un día te conocí
+Qué buena suerte
+Que te encontré a ti
+Habrá gente que dirá
+"Toda una vida es exagerar"
+Pero si es contigo
+Tiempo va a faltar
+Hasta que pierda el color de mi pelo
+Y que los niños nos digan abuelos
+Cuando mis piernas no puedan andar
+Hasta ese día me voy a quedar
+Cuando los años nos pinten las manos
+Que el 2020 se vuelva lejano
+Cuando mi pulso se quiera apagar
+Hasta ese día me voy a quedar
+    </p>
   </div>
 </body>
 </html>
