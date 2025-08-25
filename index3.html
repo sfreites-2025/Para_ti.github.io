@@ -77,62 +77,29 @@
       width: 60%;
       border-radius: 3px;
     }
-    .text-image-row {
+    .text-image-column {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
+      flex-direction: column;
       max-width: 700px;
       margin: 30px auto;
       padding: 0 15px;
-      text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
       color: #ffb1c1;
       font-size: 1.3em;
       line-height: 1.5;
+      text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
+      align-items: center;
+      gap: 15px;
     }
-    .text-image-row .left-text {
-      flex-grow: 1;
-      text-align: left;
+    .text-image-column .left-text {
+      width: 100%;
+      text-align: center;
     }
-    .text-image-row .right-image {
-      flex-shrink: 0;
-      width: 180px;
-      max-width: 40vw;
+    .text-image-column .right-image {
+      width: 70vw;
+      max-width: 280px;
       border-radius: 15px;
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
-      margin-left: auto;
-    }
-    @media screen and (max-width: 480px) {
-      header {
-        height: 60px;
-      }
-      .typing-title {
-        font-size: 1.8em;
-        width: 18ch;
-      }
-      main {
-        padding: 15px 20px;
-        font-size: 1em;
-        max-width: 90%;
-      }
-      hr.separator {
-        width: 80%;
-      }
-      .text-image-row {
-        flex-direction: column;
-        text-align: center;
-      }
-      .text-image-row .left-text {
-        text-align: center;
-        margin-bottom: 15px;
-      }
-      .text-image-row .right-image {
-        width: 70vw;
-        max-width: 280px;
-        margin-left: auto;
-        margin-right: auto;
-      }
     }
   </style>
 </head>
@@ -145,7 +112,7 @@
       Nuestros nombres comienzan con la misma letra, S y S... no sé si será destino o simple casualidad, pero si así lo es, quiero descubrir más de esas pequeñas señales en ti. Quiero encontrar en cada gesto, en cada sonrisa, más pistas que confirmen que estamos destinados a cruzar estos caminos. Porque a veces, las casualidades más pequeñas se convierten en las historias más grandes. Y yo quiero vivir esa historia contigo.
     </p>
     <hr class="separator" />
-    <div class="text-image-row">
+    <div class="text-image-column">
       <div class="left-text">Enamorado totalmente de ti</div>
       <a href="https://ibb.co/Fks7kQjG" target="_blank" rel="noopener noreferrer">
         <img src="https://i.ibb.co/Fks7kQjG/Whats-App-Image-2025-08-25-at-12-47-16-PM.jpg" alt="Imagen" class="right-image" />
