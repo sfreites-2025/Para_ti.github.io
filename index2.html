@@ -42,6 +42,15 @@
       display: inline-block;
       box-shadow: 0 0 8px rgba(219, 58, 115, 0.8);
     }
+    /* Título pequeño debajo de la línea */
+    h2.song-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.8em;
+      margin: 20px 0 15px 0;
+      color: #ffabb9;
+      text-shadow: 0 0 8px rgba(219, 58, 115, 0.9);
+    }
     /* Nueva tipografía aplicada sólo a estos párrafos */
     .custom-font {
       font-family: 'Merriweather', serif;
@@ -117,6 +126,10 @@
         font-size: 2em;
         margin-bottom: 15px;
       }
+      h2.song-title {
+        font-size: 1.5em;
+        margin: 15px 0 10px 0;
+      }
       p {
         font-size: 1em;
         max-width: 320px;
@@ -178,7 +191,10 @@
     <!-- Separador moderado -->
     <hr class="separator" />
 
-    <!-- Nuevo texto debajo del separador -->
+    <!-- Título relativo al texto abajo -->
+    <h2 class="song-title">Una canción para ti</h2>
+
+    <!-- Nuevo texto debajo del título -->
     <p class="song-text">
 Yo que creía que nunca iba a encontrar
 Un amor tan puro y real,
