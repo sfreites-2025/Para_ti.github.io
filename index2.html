@@ -13,13 +13,15 @@
             overflow-x: hidden;
             overflow-y: scroll;
             background-image: url('https://i1.sndcdn.com/artworks-fIPr5wcwAE22RH4e-zf2Dtw-t500x500.jpg');
-            background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+            background-size: contain;
             background-attachment: fixed;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
         }
         .overlay {
-            background-color: rgba(0, 0, 0, 0.55); /* ligeramente oscuro para contraste */
+            background-color: rgba(0, 0, 0, 0.55);
             min-height: 100vh;
             padding: 30px 20px;
             box-sizing: border-box;
