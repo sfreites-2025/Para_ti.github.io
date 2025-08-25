@@ -5,7 +5,6 @@
     <title>Página móvil animada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
-        /* Reset y estilos base */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
                 Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -21,11 +20,10 @@
             background: white;
             min-height: 100vh;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            padding: 15px 20px 100px; /* espacio abajo para footer fijo */
+            padding: 15px 20px 100px;
             box-sizing: border-box;
             position: relative;
         }
-        /* Animaciones de entrada */
         @keyframes fadeInSlideDown {
             0% {opacity:0; transform: translateY(-30px);}
             100% {opacity:1; transform: translateY(0);}
@@ -34,7 +32,6 @@
             0% {opacity:0; transform: scale(0.5);}
             100% {opacity:1; transform: scale(1);}
         }
-        /* Icono en esquina */
         .icono-esquina {
             position: absolute;
             top: 15px;
@@ -45,10 +42,10 @@
             animation: fadeInScale 0.8s ease forwards;
         }
         header {
-            background-color: #007aff; /* color iOS azul */
+            background-color: #db3a73; /* rosa intenso */
             color: white;
             text-align: center;
-            padding: 60px 10px 20px; /* espacio top para icono */
+            padding: 60px 10px 20px;
             font-size: 1.8em;
             font-weight: 600;
             border-radius: 15px 15px 0 0;
@@ -65,57 +62,42 @@
         .bienvenida {
             font-size: 1.3em;
             margin-top: 20px;
-            color: #007aff;
+            color: #db3a73;
             font-weight: 500;
             animation: fadeInSlideDown 1.5s ease forwards;
             animation-delay: 0.5s;
         }
-        /* Estilos para menú tipo lobby */
         .lobby-menu {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
             margin-top: 40px;
             animation: fadeInSlideDown 1.8s ease forwards;
             animation-delay: 0.7s;
         }
         .menu-item {
-            background-color: #007aff;
+            background: linear-gradient(135deg, #f8a5c2, #c56cf0);
             color: white;
-            padding: 25px 20px;
-            border-radius: 20px;
+            padding: 20px 25px;
+            border-radius: 30px 0 0 30px;
             font-weight: 600;
-            font-size: 1.2em;
-            width: 28%;
-            text-align: center;
+            font-size: 1.3em;
+            width: 160px;
+            text-align: left;
             cursor: pointer;
-            box-shadow: 0 5px 10px rgba(0,123,255,0.4);
+            box-shadow: 0 5px 15px rgba(197,108,240,0.6);
             user-select: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            border: 2px solid #db3a73;
         }
         .menu-item:hover,
         .menu-item:focus {
             transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0,123,255,0.6);
+            box-shadow: 0 8px 25px rgba(197,108,240,0.9);
+            background: linear-gradient(135deg, #ffa6cf, #d27cff);
             outline: none;
-        }
-        /* Pie de página fijo abajo */
-        footer {
-            background-color: #007aff;
-            color: white;
-            text-align: center;
-            padding: 12px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            max-width: 480px;
-            left: 50%;
-            transform: translateX(-50%);
-            box-sizing: border-box;
-            border-radius: 0 0 15px 15px;
-            font-weight: 500;
-            font-size: 0.9em;
-            animation: fadeInSlideDown 1s ease forwards;
-            animation-delay: 0.6s;
+            border-color: #f06292;
         }
     </style>
 </head>
@@ -127,21 +109,12 @@
         </header>
         <main>
             <p class="bienvenida">Hola, quería decirte que desde que te conozco, mi día es más brillante. ❤️</p>
-            <div class="lobby-menu" role="navigation" aria-label="Menú principal">
-                <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección Tu">
-                    Tu
-                </div>
-                <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección Nosotros">
-                    Nosotros
-                </div>
-                <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección ¿Si?">
-                    ¿Si?
-                </div>
-            </div>
+            <nav class="lobby-menu" aria-label="Menú principal">
+                <a href="index2.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Tu">Tu</a>
+                <a href="index3.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Nosotros">Nosotros</a>
+                <a href="index4.html" class="menu-item" tabindex="0" role="button" aria-label="Sección ¿Si?">¿Si?</a>
+            </nav>
         </main>
     </div>
-    <footer>
-        &copy; 2025 Mi Página Web
-    </footer>
 </body>
 </html>
