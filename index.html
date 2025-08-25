@@ -60,18 +60,23 @@
             line-height: 1.5;
             animation: fadeInSlideDown 1.2s ease forwards;
             animation-delay: 0.3s;
+            text-align: center;
         }
-        main h2, main h3 {
+        .bienvenida {
+            font-size: 1.3em;
+            margin-top: 20px;
             color: #007aff;
-            margin-top: 1.2em;
+            font-weight: 500;
+            animation: fadeInSlideDown 1.5s ease forwards;
+            animation-delay: 0.5s;
         }
         /* Estilos para menú tipo lobby */
         .lobby-menu {
             display: flex;
             justify-content: space-around;
-            margin-top: 30px;
-            animation: fadeInSlideDown 1.5s ease forwards;
-            animation-delay: 0.5s;
+            margin-top: 40px;
+            animation: fadeInSlideDown 1.8s ease forwards;
+            animation-delay: 0.7s;
         }
         .menu-item {
             background-color: #007aff;
@@ -112,11 +117,6 @@
             animation: fadeInSlideDown 1s ease forwards;
             animation-delay: 0.6s;
         }
-        /* Animación suave para enlaces o interacciones futuras */
-        a, button {
-            transition: all 0.3s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
     </style>
 </head>
 <body>
@@ -126,7 +126,7 @@
             Como estas?
         </header>
         <main>
-            <h2>Inicio</h2>
+            <p class="bienvenida">Hola, quería decirte que desde que te conozco, mi día es más brillante. ❤️</p>
             <div class="lobby-menu" role="navigation" aria-label="Menú principal">
                 <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección Tu">
                     Tu
@@ -138,13 +138,6 @@
                     ¿Si?
                 </div>
             </div>
-
-            <h3>Secciones principales</h3>
-            <ul>
-                <li>Inicio</li>
-                <li>Acerca de</li>
-                <li>Contacto</li>
-            </ul>
         </main>
     </div>
     <footer>
