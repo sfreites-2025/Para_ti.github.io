@@ -152,6 +152,31 @@
       text-align: center;
       font-weight: 600;
     }
+    /* Estilos para el botón y texto de la nota */
+    .button-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .button-si {
+      background-color: #db3a73;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
+      transition: background-color 0.3s ease;
+    }
+    .button-si:hover {
+      background-color: #ff6699;
+    }
+    .note-text {
+      margin-top: 8px;
+      font-size: 1em;
+      color: #ffabc1;
+      text-shadow: 0 0 6px rgba(219, 58, 115, 0.8);
+    }
     @media screen and (max-width: 480px) {
       header {
         height: 60px;
@@ -189,6 +214,10 @@
       .fearless-text {
         font-size: 1em;
         margin-top: 10px;
+      }
+      .button-si {
+        padding: 10px 25px;
+        font-size: 1em;
       }
     }
   </style>
@@ -230,6 +259,10 @@
       ¿Pero para que tener miedo, si tú estás aquí?
     </p>
     <hr class="separator" />
+    <div class="button-container">
+      <button class="button-si" onclick="location.href='index4'">¿Si?</button>
+      <div class="note-text">Toca el botón</div>
+    </div>
   </main>
 </body>
 </html>
