@@ -108,18 +108,70 @@
       width: 60%;
       border-radius: 2px;
     }
-    /* Estilo para el nuevo texto debajo del separador */
+    /* Estilo para el texto de la canción */
     .song-text {
       font-family: 'Merriweather', serif;
       font-size: 1.15em;
       max-width: 420px;
       margin: 20px 0 40px 0;
       line-height: 1.7;
-      white-space: pre-line;  /* respeta saltos de línea */
+      white-space: pre-line;
       text-shadow: 0 0 12px rgba(0,0,0,0.75);
       color: #ffd6e3;
       text-align: center;
       padding: 0 10px;
+    }
+    /* Estilo para el nuevo bloque con animación */
+    .animation-box {
+      width: 100%;
+      background: linear-gradient(145deg, #db3a73, #ffabb9);
+      box-shadow: 0 4px 15px rgba(219, 58, 115, 0.6);
+      border-radius: 14px;
+      padding: 20px 30px;
+      margin: 30px 0 40px 0;
+      color: #fff;
+      font-family: 'Merriweather', serif;
+      font-size: 1.15em;
+      line-height: 1.7;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: pulseAnimation 3s ease-in-out infinite;
+    }
+    /* Animación suave pulsante */
+    @keyframes pulseAnimation {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(219, 58, 115, 0.8), 0 0 30px rgba(219, 58, 115, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(219, 58, 115, 1), 0 0 40px rgba(255, 171, 185, 0.7);
+      }
+    }
+    /* Estilo para el título del nuevo bloque */
+    .animation-box h3 {
+      margin-top: 0;
+      font-weight: 700;
+      font-size: 2em;
+      color: #ffe1e8;
+      text-shadow: 0 0 10px rgba(255, 171, 185, 0.9);
+    }
+    /* Estilo para el link */
+    .animation-box a {
+      color: #ffdef0;
+      font-weight: 600;
+      font-size: 1.1em;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 2px solid #ffabc1;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .animation-box a:hover {
+      background-color: #ffabc1;
+      color: #3b0025;
+      box-shadow: 0 0 10px #ffabc1;
     }
     @media screen and (max-width: 480px) {
       h1 {
@@ -150,7 +202,7 @@
         margin-left: auto;
       }
       .text-image-row {
-        flex-direction: row;  
+        flex-direction: row;
         align-items: center;
         text-align: left;
         gap: 12px;
@@ -162,6 +214,17 @@
         max-width: 90%;
         font-size: 1em;
         margin: 15px 0 30px;
+      }
+      .animation-box {
+        padding: 15px 20px;
+        font-size: 1em;
+      }
+      .animation-box h3 {
+        font-size: 1.5em;
+      }
+      .animation-box a {
+        font-size: 1em;
+        padding: 8px 15px;
       }
     }
   </style>
@@ -215,6 +278,16 @@ Porque amarte es mi destino y quedarme contigo, mi única promesa.Nada es perfec
 
     <!-- Segundo separador moderado -->
     <hr class="separator" />
+
+    <!-- Nuevo bloque animado con título, texto y link -->
+    <div class="animation-box">
+      <h3>Se que besas tan bien...</h3>
+      <p>
+        Y sí, a veces el mundo puede ponerse gris, y sí, puede que dudemos si seguir adelante. Pero no importa cuán alta o complicada sea la montaña, ahí estaré, contigo, para subirla juntos.<br />
+        Confieso que estoy asustado, pero también emocionado, porque sé que cuando estés conmigo, cada instante será como vivir esa canción de Nelson Arrieta, “Besas tan bien”. Siento que tu amor hará que todo tenga sentido y que cada beso sea el ritmo que me guía en esta aventura contigo.
+      </p>
+      <a href="https://www.youtube.com/watch?v=upUQGY77vwQ" target="_blank" rel="noopener noreferrer">Escuchar la canción en YouTube</a>
+    </div>
   </div>
 </body>
 </html>
