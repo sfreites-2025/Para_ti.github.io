@@ -16,7 +16,7 @@
       font-family: 'Merriweather', serif;
       background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
       color: white;
-      overflow: hidden; /* controlar scroll en div */
+      overflow: hidden; /* controlar scroll */
     }
     header {
       position: fixed;
@@ -67,11 +67,11 @@
       padding: 25px 30px 30px 30px;
       max-width: 700px;
       margin: 0 auto;
-      text-align: center;
       color: #ffd6e3;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
       font-size: 1.2em;
       line-height: 1.6;
+      text-align: center;
     }
     hr.separator {
       border: none;
@@ -81,18 +81,50 @@
       width: 60%;
       border-radius: 3px;
     }
+    .text-image-row {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 15px;
+      overflow: hidden; /* para que contenga el float */
+      font-size: 1.3em;
+      line-height: 1.5;
+      color: #ffb1c1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
+    }
+    .text-image-row .left-text {
+      flex: 1;
+      text-align: left;
+      padding-right: 15px;
+    }
+    .text-image-row .right-image {
+      flex-shrink: 0;
+      width: 180px;
+      border-radius: 15px;
+      border: 3px solid #db3a73;
+      box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
+    }
     @media screen and (max-width: 480px) {
-      header {
-        height: 60px;
-      }
+      header { height: 60px; }
       .typing-title {
         font-size: 1.8em;
         width: 18ch;
       }
-      main {
-        padding: 15px 20px;
-        font-size: 1em;
+      main, .text-image-row {
         max-width: 90%;
+        font-size: 1em;
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-image-row .left-text {
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+      .text-image-row .right-image {
+        width: 100%;
+        max-width: 280px;
       }
       hr.separator {
         width: 80%;
@@ -109,7 +141,12 @@
       Nuestros nombres comienzan con la misma letra, S y S... no sé si será destino o simple casualidad, pero si así lo es, quiero descubrir más de esas pequeñas señales en ti. Quiero encontrar en cada gesto, en cada sonrisa, más pistas que confirmen que estamos destinados a cruzar estos caminos. Porque a veces, las casualidades más pequeñas se convierten en las historias más grandes. Y yo quiero vivir esa historia contigo.
     </p>
     <hr class="separator" />
-    <!-- Aquí más contenido si quieres -->
+    <div class="text-image-row">
+      <div class="left-text">Enamorado totalmente de ti</div>
+      <a href="https://ibb.co/Fks7kQjG" target="_blank" rel="noopener noreferrer">
+        <img src="https://i.ibb.co/Fks7kQjG/Whats-App-Image-2025-08-25-at-12-47-16-PM.jpg" alt="Imagen" class="right-image" />
+      </a>
+    </div>
   </main>
 </body>
 </html>
