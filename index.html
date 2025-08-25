@@ -21,30 +21,18 @@
             background: white;
             min-height: 100vh;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            padding: 15px 20px 80px; /* bottom padding para footer fijo */
+            padding: 15px 20px 100px; /* espacio abajo para footer fijo */
             box-sizing: border-box;
             position: relative;
         }
-        /* Animación de entrada */
+        /* Animaciones de entrada */
         @keyframes fadeInSlideDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% {opacity:0; transform: translateY(-30px);}
+            100% {opacity:1; transform: translateY(0);}
         }
         @keyframes fadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            0% {opacity:0; transform: scale(0.5);}
+            100% {opacity:1; transform: scale(1);}
         }
         /* Icono en esquina */
         .icono-esquina {
@@ -77,14 +65,33 @@
             color: #007aff;
             margin-top: 1.2em;
         }
-        ul li {
-            margin-bottom: 10px;
-            transition: transform 0.3s ease;
-            cursor: default;
+        /* Estilos para menú tipo lobby */
+        .lobby-menu {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            animation: fadeInSlideDown 1.5s ease forwards;
+            animation-delay: 0.5s;
         }
-        ul li:hover {
-            transform: scale(1.05);
-            color: #0051a8;
+        .menu-item {
+            background-color: #007aff;
+            color: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.2em;
+            width: 28%;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0,123,255,0.4);
+            user-select: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item:hover,
+        .menu-item:focus {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0,123,255,0.6);
+            outline: none;
         }
         /* Pie de página fijo abajo */
         footer {
@@ -119,8 +126,19 @@
             Como estas?
         </header>
         <main>
-            <h2>Sobre mí</h2>
-            <p>Esta es una página de ejemplo creada con HTML y CSS, diseñada para verse bien en iPhone con animaciones suaves y estilo nativo.</p>
+            <h2>Inicio</h2>
+            <div class="lobby-menu" role="navigation" aria-label="Menú principal">
+                <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección Tu">
+                    Tu
+                </div>
+                <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección Nosotros">
+                    Nosotros
+                </div>
+                <div tabindex="0" class="menu-item" role="button" aria-pressed="false" aria-label="Sección ¿Si?">
+                    ¿Si?
+                </div>
+            </div>
+
             <h3>Secciones principales</h3>
             <ul>
                 <li>Inicio</li>
