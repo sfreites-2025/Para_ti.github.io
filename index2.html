@@ -41,6 +41,20 @@
             line-height: 1.5;
             text-shadow: 0 0 10px rgba(0,0,0,0.7);
         }
+        .img-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 25px;
+        }
+        .profile-img {
+            width: 180px;
+            max-width: 40vw;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 0 0 18px rgba(0,0,0,0.33);
+            object-fit: cover;
+        }
         @media screen and (max-width: 480px) {
             h1 {
                 font-size: 2em;
@@ -51,6 +65,9 @@
                 max-width: 320px;
                 margin: 10px 0;
             }
+            .profile-img {
+                width: 48vw;
+            }
         }
     </style>
 </head>
@@ -60,6 +77,9 @@
         <p>Cada vez que sentía que necesitaba salir de mi zona, es tu imagen la que aparecía en mi mente, recordándome el amor y cariño que me diste, justo lo que siempre necesité.</p>
         <p>Y no solo eso, cuando suena tu cantante favorito, es como si el tiempo se detuviera y volviera a revivir todo lo que significaste para mí.</p>
         <p>Fuiste esa mujer que me quiso de verdad, con un amor sincero que dejó huella en mi corazón, y por eso te llevo siempre conmigo, en cada pensamiento y en cada emoción.</p>
+        <div class="img-wrapper">
+            <img src="WhatsApp-Image-2025-08-24-at-8.41.18-PM.jpg" alt="Foto especial" class="profile-img" />
+        </div>
     </div>
 </body>
 </html>
