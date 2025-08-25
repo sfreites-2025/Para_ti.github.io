@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Somos S y S x100pre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background-color: #111; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Merriweather', serif;
+      color: white;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
+    }
+    .typing-title {
+      font-size: 2.8em;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;            /* Ocultamos texto sobrante para la animación */
+      border-right: 0.15em solid rgba(219, 58, 115, 0.8); /* Cursor */
+      width: 18ch;                 /* Ancho igual a número caracteres */
+      animation:
+        typing 4s steps(18) forwards,
+        blinkCursor 0.75s step-end infinite,
+        colorPulse 3s ease-in-out infinite;
+      background: linear-gradient(270deg, #db3a73, #ffabb9, #db3a73);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 auto;
+    }
+
+    /* Animación typing */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 18ch;
+      }
+    }
+    /* Parpadeo cursor */
+    @keyframes blinkCursor {
+      0%, 100% {
+        border-color: rgba(219, 58, 115, 0.8);
+      }
+      50% {
+        border-color: transparent;
+      }
+    }
+    /* Pulsación de color degradado */
+    @keyframes colorPulse {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 480px) {
+      .typing-title {
+        font-size: 1.8em;
+        width: 18ch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="typing-title">Somos S y S x100pre</h1>
+</body>
+</html>
