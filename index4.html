@@ -91,6 +91,33 @@
       filter: drop-shadow(0 0 10px rgba(255,105,147,1));
     }
 
+    /* Imagenes horizontales al final */
+    .image-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 25px;
+      width: 100%;
+      max-width: 700px;
+      animation: fadeInUp 2.5s ease forwards;
+      opacity: 0;
+    }
+    .image-row img {
+      width: 100px;
+      max-width: 30vw;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(219, 58, 115, 0.7);
+      cursor: pointer;
+      animation: pulseShadow 3.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      will-change: box-shadow, transform;
+    }
+    .image-row img:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 0 25px rgba(255, 105, 147, 1);
+    }
+
     /* Animaciones */
 
     @keyframes fadeInUp {
@@ -136,6 +163,16 @@
         filter: drop-shadow(0 0 10px rgba(255,105,147,1));
       }
     }
+
+    @keyframes pulseShadow {
+      0%, 100% {
+        box-shadow: 0 0 12px rgba(219, 58, 115, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(255, 105, 147, 1);
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -148,6 +185,12 @@
     </div>
     <p>Mi corazón está entero, dispuesto a redescubrirte y a reinventarnos, a aprender de errores pasados y a escribir nuevas páginas con tinta de paciencia, respeto y pasión. Seré el faro que guía en la oscuridad y el calor que refugia en el invierno, porque ahora sé que el verdadero amor es el que se cultiva con presencia, con entrega y con la convicción de que cada día es una oportunidad para mantener viva la magia que solo nosotros podemos crear. Aquí estoy, sin miedo ni dudas, con el alma abierta y el compromiso firme de amarte con la intensidad y la ternura que mereces, sin perder nunca la esperanza ni la voluntad de ser mejores, juntos. </p>
     <p>¿Quieres volver a compartir tu vida conmigo, a crecer, a madurar juntos, comenzar un nuevo inicio, poder amarnos y dejar que el destino nos una cada día más? Porque yo te amo y mi corazón late bastante, gracias a ti. ¿Quieres ser mi novia...?</p>
+
+    <div class="image-row">
+      <img src="https://cdn-icons-png.flaticon.com/512/9037/9037453.png" alt="Icono amor" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3065/3065893.png" alt="Icono abrazo" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2366/2366148.png" alt="Icono planta de amor" />
+    </div>
   </main>
 </body>
 </html>
