@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body, html {
       margin: 0;
       height: 100%;
@@ -101,6 +104,38 @@
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
     }
+    .graduada-text {
+      font-size: 1.5em;
+      margin: 25px 0 10px 0;
+      color: #ffabc1;
+      text-shadow: 0 0 8px rgba(219, 58, 115, 0.9);
+    }
+
+    @media screen and (max-width: 480px) {
+      header {
+        height: 60px;
+      }
+      .typing-title {
+        font-size: 1.8em;
+        width: 18ch;
+      }
+      main {
+        padding: 15px 20px;
+        font-size: 1em;
+        max-width: 90%;
+      }
+      hr.separator {
+        width: 80%;
+      }
+      .text-image-column .right-image {
+        width: 90vw;
+        max-width: 280px;
+      }
+      .graduada-text {
+        font-size: 1.3em;
+        margin: 20px 0 8px 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -118,6 +153,11 @@
         <img src="https://i.ibb.co/Fks7kQjG/Whats-App-Image-2025-08-25-at-12-47-16-PM.jpg" alt="Imagen" class="right-image" />
       </a>
     </div>
+    <hr class="separator" />
+    <div class="graduada-text">Mi graduada bella</div>
+    <a href="https://ibb.co/SX30jfy1" target="_blank" rel="noopener noreferrer">
+      <img src="https://i.ibb.co/SX30jfy1/Whats-App-Image-2025-08-25-at-12-47-14-PM.jpg" alt="Mi graduada bella" style="width:70vw; max-width:280px; border-radius: 15px; border: 3px solid #db3a73; box-shadow: 0 0 10px rgba(219, 58, 115, 0.7); margin: 10px auto; display: block;" />
+    </a>
   </main>
 </body>
 </html>
