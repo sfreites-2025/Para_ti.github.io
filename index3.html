@@ -125,6 +125,9 @@
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
       margin: 20px auto 0 auto;
       display: block;
+      object-fit: cover;
+      height: 350px;
+      object-position: center top;
     }
     .final-text {
       margin-top: 20px;
@@ -136,13 +139,15 @@
       padding: 0 10px;
     }
     .extra-image {
-      width: 70vw;
-      max-width: 280px;
+      width: 280px;
+      height: 350px;
       border-radius: 15px;
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
       margin: 20px auto 0 auto;
       display: block;
+      object-fit: cover;
+      object-position: center top;
     }
     @media screen and (max-width: 480px) {
       header {
@@ -165,6 +170,8 @@
       .extra-image {
         width: 90vw;
         max-width: 280px;
+        height: auto;
+        object-position: center top;
       }
       .graduada-text {
         font-size: 1.3em;
