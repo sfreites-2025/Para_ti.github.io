@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Mi amor Sami</title>
+    <title>Para mi Sami</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
         body {
@@ -42,7 +42,7 @@
             animation: fadeInScale 0.8s ease forwards;
         }
         header {
-            background-color: #db3a73;
+            background-color: #db3a73; /* rosa intenso */
             color: white;
             text-align: center;
             padding: 60px 10px 20px;
@@ -91,7 +91,6 @@
             border: 2px solid #db3a73;
             text-decoration: none;
             box-sizing: border-box;
-            position: relative;
         }
         .menu-item:hover,
         .menu-item:focus {
@@ -101,14 +100,11 @@
             outline: none;
             border-color: #f06292;
         }
-        /* Nota debajo del primer botón */
-        .nota {
-            font-size: 0.9em;
-            color: #a83260;
-            margin-top: 8px;
-            margin-left: 6px;
-            text-align: left;
+        .nota-final {
+            margin-top: 25px;
+            font-size: 1em;
             font-style: italic;
+            color: #a83260;
             animation: fadeInSlideDown 2s ease forwards;
             animation-delay: 2s;
             user-select: none;
@@ -124,13 +120,11 @@
         <main>
             <p class="bienvenida">Hola, quería decirte que desde que te conozco, mi día es más brillante. ❤️</p>
             <nav class="lobby-menu" aria-label="Menú principal">
-                <div>
-                    <a href="index2.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Tu">Tu</a>
-                    <p class="nota">nota: presiona el primer botón</p>
-                </div>
+                <a href="index2.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Tu">Tu</a>
                 <a href="index3.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Nosotros">Nosotros</a>
                 <a href="index4.html" class="menu-item" tabindex="0" role="button" aria-label="Sección ¿Si?">¿Si?</a>
             </nav>
+            <p class="nota-final">nota: presiona el primer botón</p>
         </main>
     </div>
 </body>
