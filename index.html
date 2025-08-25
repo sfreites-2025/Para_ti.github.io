@@ -2,67 +2,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Como estas?</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página móvil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background: #f4f4f4; 
-            margin: 0; 
+        /* Estilos generales para móvil */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
         }
+        .container {
+            max-width: 480px; /* Tamaño típico móvil */
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 1.5em;
+            position: relative;
+        }
+        main {
+            padding: 20px 10px;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        /* Pie de página fijo abajo */
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 480px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+        }
+        /* Imagen icono en esquina superior izquierda */
         .icono-esquina {
             position: absolute;
             top: 10px;
             left: 10px;
-            width: 96px; /* tamaño aumentado */
-            height: 96px;
-            z-index: 100;
-        }
-        header { 
-            background: #222; 
-            color: #fff; 
-            padding: 20px 0; 
-            text-align: center; 
-            position: relative;
-        }
-        main { 
-            padding: 20px; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            background: #fff; 
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer { 
-            background: #222; 
-            color: #fff; 
-            text-align: center; 
-            padding: 10px 0; 
-            position: fixed; 
-            bottom: 0; 
-            width: 100%; 
+            width: 64px;
+            height: 64px;
+            z-index: 10;
         }
     </style>
 </head>
 <body>
-    <img 
-        src="https://cdn-icons-png.flaticon.com/512/11009/11009785.png"
-        alt="Icono Amor Propio"
-        class="icono-esquina"
-    >
-    <header>
-        <h1>Bienvenida</h1>
-    </header>
-    <main>
-        <h2>Sobre mí</h2>
-        <p>Esta es una página de ejemplo creada con HTML y CSS.</p>
-        <h3>Secciones principales</h3>
-        <ul>
-            <li>Inicio</li>
-            <li>Acerca de</li>
-            <li>Contacto</li>
-        </ul>
-    </main>
+    <div class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/11009/11009785.png" alt="Icono Amor Propio" class="icono-esquina">
+        <header>
+            Como estas?
+        </header>
+        <main>
+            <h2>Sobre mí</h2>
+            <p>Esta es una página de ejemplo creada con HTML y CSS, diseñada para verse bien en teléfonos móviles.</p>
+            <h3>Secciones principales</h3>
+            <ul>
+                <li>Inicio</li>
+                <li>Acerca de</li>
+                <li>Contacto</li>
+            </ul>
+        </main>
+    </div>
     <footer>
         &copy; 2025 Mi Página Web
     </footer>
