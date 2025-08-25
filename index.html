@@ -16,6 +16,7 @@
             background: linear-gradient(135deg, #2c003e, #6a1b9a);
             color: #f3e8ff;
             overflow-x: hidden;
+            overflow-y: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -117,11 +118,12 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 80px;
-            height: 80px;
+            width: 48px; /* reducido de 80px */
+            height: 48px; /* reducido de 80px */
             filter: drop-shadow(0 0 6px #e040fb);
             animation: iconFadeIn 1.5s ease forwards;
             opacity: 0;
+            z-index: 15;
         }
         @keyframes iconFadeIn {
             to {
