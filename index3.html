@@ -9,23 +9,26 @@
   <style>
     body {
       margin: 0; padding: 0;
-      background-color: #111; 
+      background-color: #111;
+      font-family: 'Merriweather', serif;
+      color: white;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: 'Merriweather', serif;
-      color: white;
-      overflow: hidden;
-      background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
+      text-align: center;
+      padding: 0 20px;
     }
+    /* Título con typing effect y color gradient pulsante */
     .typing-title {
-      font-size: 2.8em;
+      font-size: 3em;
       font-weight: 700;
       white-space: nowrap;
-      overflow: hidden;            /* Ocultamos texto sobrante para la animación */
-      border-right: 0.15em solid rgba(219, 58, 115, 0.8); /* Cursor */
-      width: 18ch;                 /* Ancho igual a número caracteres */
+      overflow: hidden;
+      border-right: 0.15em solid rgba(219, 58, 115, 0.8);
+      width: 18ch;
+      margin-bottom: 20px;
       animation:
         typing 4s steps(18) forwards,
         blinkCursor 0.75s step-end infinite,
@@ -34,47 +37,45 @@
       background-size: 600% 600%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin: 0 auto;
     }
-
     /* Animación typing */
     @keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 18ch;
-      }
+      from { width: 0 }
+      to { width: 18ch }
     }
     /* Parpadeo cursor */
     @keyframes blinkCursor {
-      0%, 100% {
-        border-color: rgba(219, 58, 115, 0.8);
-      }
-      50% {
-        border-color: transparent;
-      }
+      0%, 100% { border-color: rgba(219, 58, 115, 0.8) }
+      50% { border-color: transparent }
     }
-    /* Pulsación de color degradado */
+    /* Pulso color */
     @keyframes colorPulse {
-      0%, 100% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
+      0%, 100% { background-position: 0% 50% }
+      50% { background-position: 100% 50% }
     }
-
-    /* Responsive */
+    /* Texto debajo del título */
+    .subtitle {
+      max-width: 700px;
+      font-size: 1.3em;
+      line-height: 1.6;
+      color: #ffd6e3;
+      text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
+    }
     @media screen and (max-width: 480px) {
       .typing-title {
         font-size: 1.8em;
         width: 18ch;
+      }
+      .subtitle {
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
   <h1 class="typing-title">Somos S y S x100pre</h1>
+  <p class="subtitle">
+    Bienvenidos a nuestra historia, un espacio lleno de amor, sueños y promesas que siempre se cumplirán. Aquí comienza nuestro viaje juntos.
+  </p>
 </body>
 </html>
