@@ -16,6 +16,12 @@
       background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
       color: white;
       overflow: hidden;
+      animation: bgPulse 20s ease-in-out infinite;
+      will-change: background-position;
+    }
+    @keyframes bgPulse {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
     header {
       position: fixed;
@@ -27,6 +33,17 @@
       align-items: center;
       box-shadow: 0 3px 10px rgba(219, 58, 115, 0.7);
       z-index: 1000;
+      animation: fadeInDown 1s ease forwards;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .typing-title {
       font-size: 2.4em;
@@ -44,6 +61,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin: 0;
+      will-change: width, border-color, background-position;
     }
     @keyframes typing {
       from { width: 0 }
@@ -71,6 +89,19 @@
       font-size: 1.2em;
       line-height: 1.6;
       text-align: center;
+      animation: fadeInUp 1.5s ease forwards 0.5s;
+      opacity: 0;
+      will-change: opacity, transform;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     hr.separator {
       border: none;
@@ -79,6 +110,12 @@
       margin: 30px auto;
       width: 60%;
       border-radius: 3px;
+      animation: pulseSeparator 3s ease-in-out infinite;
+      will-change: background-color;
+    }
+    @keyframes pulseSeparator {
+      0%, 100% { background-color: rgba(219, 58, 115, 0.8); }
+      50% { background-color: rgba(255, 105, 147, 0.9); }
     }
     .text-image-column {
       display: flex;
@@ -92,10 +129,29 @@
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
       align-items: center;
       gap: 15px;
+      animation: fadeInScale 2s ease forwards;
+      opacity: 0;
+      will-change: opacity, transform;
+    }
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
     .text-image-column .left-text {
       width: 100%;
       text-align: center;
+      animation: floatText 4s ease-in-out infinite;
+      will-change: transform;
+    }
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0) }
+      50% { transform: translateY(-5px) }
     }
     .text-image-column .right-image {
       width: 70vw;
@@ -103,12 +159,30 @@
       border-radius: 15px;
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
+      animation: pulseShadow 4s ease-in-out infinite;
+      will-change: box-shadow;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .text-image-column .right-image:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 20px rgba(255, 105, 147, 0.9);
+    }
+    @keyframes pulseShadow {
+      0%, 100% { box-shadow: 0 0 10px rgba(219, 58, 115, 0.7); }
+      50% { box-shadow: 0 0 20px rgba(255, 105, 147, 0.9); }
     }
     .graduada-text {
       font-size: 1.5em;
       margin: 25px 0 10px 0;
       color: #ffabc1;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.9);
+      animation: colorPulseText 3s ease-in-out infinite;
+      will-change: color, text-shadow;
+    }
+    @keyframes colorPulseText {
+      0%, 100% { color: #ffabc1; text-shadow: 0 0 8px rgba(219, 58, 115, 0.9); }
+      50% { color: #ff6999; text-shadow: 0 0 15px rgba(255, 105, 147, 1); }
     }
     .flower-text {
       margin-top: 15px;
@@ -116,6 +190,8 @@
       color: #ff89ac;
       text-shadow: 0 0 10px rgba(219, 58, 115, 1);
       font-weight: 600;
+      animation: floatText 5s ease-in-out infinite;
+      will-change: transform;
     }
     .final-image {
       width: 70vw;
@@ -125,6 +201,14 @@
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
       margin: 20px auto 0 auto;
       display: block;
+      animation: pulseShadow 4s ease-in-out infinite;
+      will-change: box-shadow, transform;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .final-image:hover {
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 0 20px rgba(255, 105, 147, 0.9);
     }
     .final-text {
       margin-top: 20px;
@@ -134,6 +218,9 @@
       text-shadow: 0 0 6px rgba(219, 58, 115, 0.9);
       white-space: pre-wrap;
       padding: 0 10px;
+      animation: fadeInUp 2s ease forwards 1s;
+      opacity: 0;
+      will-change: opacity, transform;
     }
     .extra-image {
       width: 70vw;
@@ -143,6 +230,14 @@
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
       margin: 20px auto 0 auto;
       display: block;
+      animation: pulseShadow 4s ease-in-out infinite;
+      will-change: box-shadow, transform;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .extra-image:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 20px rgba(255, 105, 147, 0.9);
     }
     .fearless-text {
       margin-top: 15px;
@@ -151,11 +246,20 @@
       line-height: 1.5;
       text-align: center;
       font-weight: 600;
+      animation: pulseText 4s ease-in-out infinite;
+      will-change: color, text-shadow;
     }
-    /* Estilos para el botón y texto de la nota */
+    @keyframes pulseText {
+      0%, 100% { color: #ff8db1; text-shadow: 0 0 6px rgba(219, 58, 115, 0.9); }
+      50% { color: #ff5480; text-shadow: 0 0 12px rgba(255, 105, 147, 1); }
+    }
+    /* Botón animado */
     .button-container {
       margin-top: 20px;
       text-align: center;
+      animation: fadeInUp 2s ease forwards 1.5s;
+      opacity: 0;
+      will-change: opacity, transform;
     }
     .button-si {
       background-color: #db3a73;
@@ -166,16 +270,27 @@
       font-size: 1.2em;
       cursor: pointer;
       box-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: pulseButton 3s ease-in-out infinite;
+      will-change: background-color, transform;
     }
     .button-si:hover {
       background-color: #ff6699;
+      transform: scale(1.1) rotate(-3deg);
+      box-shadow: 0 0 20px rgba(255, 105, 147, 0.9);
+    }
+    @keyframes pulseButton {
+      0%, 100% { background-color: #db3a73; }
+      50% { background-color: #ff6999; }
     }
     .note-text {
       margin-top: 8px;
       font-size: 1em;
       color: #ffabc1;
       text-shadow: 0 0 6px rgba(219, 58, 115, 0.8);
+      animation: fadeInUp 2s ease forwards 1.7s;
+      opacity: 0;
+      will-change: opacity, transform;
     }
     @media screen and (max-width: 480px) {
       header {
@@ -260,7 +375,7 @@
     </p>
     <hr class="separator" />
     <div class="button-container">
-      <button class="button-si" onclick="location.href='index4'">Este boton te lleva a la pagina final "¿Si?"</button>
+      <button class="button-si" onclick="location.href='index4'">¿Si?</button>
       <div class="note-text">Toca el botón</div>
     </div>
   </main>
