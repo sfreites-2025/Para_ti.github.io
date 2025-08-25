@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Index 2 - Ferxxo</title>
+  <title>Tu y yo, y el Ferxxoo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <!-- Google Fonts: Merriweather -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
@@ -138,7 +138,6 @@
       overflow: hidden;
       animation: pulseAnimation 3s ease-in-out infinite;
     }
-    /* Animación suave pulsante */
     @keyframes pulseAnimation {
       0%, 100% {
         box-shadow: 0 0 20px rgba(219, 58, 115, 0.8), 0 0 30px rgba(219, 58, 115, 0.4);
@@ -147,7 +146,6 @@
         box-shadow: 0 0 30px rgba(219, 58, 115, 1), 0 0 40px rgba(255, 171, 185, 0.7);
       }
     }
-    /* Estilo para el título del nuevo bloque */
     .animation-box h3 {
       margin-top: 0;
       font-weight: 700;
@@ -155,7 +153,6 @@
       color: #ffe1e8;
       text-shadow: 0 0 10px rgba(255, 171, 185, 0.9);
     }
-    /* Estilo para el link */
     .animation-box a {
       color: #ffdef0;
       font-weight: 600;
@@ -172,6 +169,37 @@
       background-color: #ffabc1;
       color: #3b0025;
       box-shadow: 0 0 10px #ffabc1;
+    }
+    /* Nuevo botón y nota */
+    .button-container {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .button-container button {
+      background-color: #db3a73;
+      border: none;
+      padding: 14px 36px;
+      font-size: 1.3em;
+      font-weight: 700;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(219, 58, 115, 0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .button-container button:hover {
+      background-color: #ffabc1;
+      box-shadow: 0 0 25px rgba(255, 171, 185, 0.9);
+      color: #3b0025;
+    }
+    .button-note {
+      margin-top: 10px;
+      font-family: 'Merriweather', serif;
+      color: #ffccd9;
+      font-size: 1em;
+      text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
     }
     @media screen and (max-width: 480px) {
       h1 {
@@ -225,6 +253,13 @@
       .animation-box a {
         font-size: 1em;
         padding: 8px 15px;
+      }
+      .button-container button {
+        padding: 12px 28px;
+        font-size: 1em;
+      }
+      .button-note {
+        font-size: 0.9em;
       }
     }
   </style>
@@ -288,6 +323,13 @@ Porque amarte es mi destino y quedarme contigo, mi única promesa.Nada es perfec
       </p>
       <a href="https://www.youtube.com/watch?v=upUQGY77vwQ" target="_blank" rel="noopener noreferrer">Escuchar la canción en YouTube</a>
     </div>
+
+    <!-- Botón Nosotros y nota -->
+    <div class="button-container">
+      <button onclick="window.location.href='index3'">Nosotros</button>
+      <div class="button-note">presiona el botón</div>
+    </div>
+
   </div>
 </body>
 </html>
