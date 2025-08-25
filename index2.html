@@ -44,35 +44,35 @@
     }
     .text-image-row {
       display: flex;
-      justify-content: flex-start;  /* Texto alineado a la izquierda */
+      justify-content: flex-start;  
       align-items: center;
       margin-top: 25px;
       gap: 20px;
       max-width: 100%;
-      flex-wrap: nowrap;             /* Sin salto de línea */
-      width: 100%;                  /* Para que ocupe todo el ancho */
+      flex-wrap: nowrap;
+      width: 100%;
     }
     .side-text {
-      max-width: 320px;
+      max-width: 55%;
       font-family: 'Georgia', serif;
       font-size: 1.2em;
       line-height: 1.4;
-      text-align: center;
+      text-align: left;
       text-shadow: 0 0 8px rgba(0,0,0,0.6);
       color: #ffe1e8;
       order: 1;
     }
     .profile-img {
       border-radius: 18px;
-      width: 180px;
-      max-width: 40vw;
+      width: 40vw;
+      max-width: 180px;
       height: auto;
       box-shadow: 0 0 18px rgba(0,0,0,0.33);
       object-fit: cover;
       border: 4px solid #db3a73;
       order: 2;
       flex-shrink: 0;
-      margin-left: auto;             /* Empuja imagen al extremo derecho */
+      margin-left: auto;
     }
     @media screen and (max-width: 480px) {
       h1 {
@@ -84,23 +84,20 @@
         max-width: 320px;
         margin: 10px 0;
       }
-      .profile-img {
-        width: 48vw;
-        order: 2;
-        margin-top: 20px;
-        margin-left: 0;          /* Quitar margen para móvil */
-      }
       .side-text {
-        max-width: 100%;
+        max-width: 55%;
         font-size: 1em;
-        margin-top: 10px;
-        order: 1;
-        text-align: center;
+        text-align: left;
+      }
+      .profile-img {
+        width: 40vw;
+        max-width: 140px;
+        margin-left: auto;
       }
       .text-image-row {
-        flex-direction: column;
+        flex-direction: row;  
         align-items: center;
-        text-align: center;
+        text-align: left;
         gap: 12px;
       }
     }
