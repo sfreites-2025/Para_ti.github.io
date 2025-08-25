@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Somos S y S x100pre - Inicio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body, html {
-      margin: 0; 
+      margin: 0;
       height: 100%;
       font-family: 'Merriweather', serif;
       background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
@@ -82,21 +78,21 @@
       border-radius: 3px;
     }
     .text-image-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
       max-width: 700px;
       margin: 30px auto;
       padding: 0 15px;
-      display: flex;
-      justify-content: flex-start; /* Para que la imagen esté totalmente a la derecha */
-      align-items: center;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
       color: #ffb1c1;
       font-size: 1.3em;
       line-height: 1.5;
     }
     .text-image-row .left-text {
-      flex: 1;
+      flex-grow: 1;
       text-align: left;
-      padding-right: 15px;
     }
     .text-image-row .right-image {
       flex-shrink: 0;
@@ -105,7 +101,7 @@
       border-radius: 15px;
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
-      margin-left: auto; /* Empuja la imagen al extremo derecho */
+      margin-left: auto;
     }
     @media screen and (max-width: 480px) {
       header {
@@ -129,12 +125,13 @@
       }
       .text-image-row .left-text {
         text-align: center;
-        padding: 0 0 15px 0;
+        margin-bottom: 15px;
       }
       .text-image-row .right-image {
         width: 70vw;
         max-width: 280px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   </style>
