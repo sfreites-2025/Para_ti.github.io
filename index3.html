@@ -16,7 +16,7 @@
       font-family: 'Merriweather', serif;
       background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
       color: white;
-      overflow: hidden; /* controlar scroll */
+      overflow: hidden;
     }
     header {
       position: fixed;
@@ -86,7 +86,7 @@
       margin: 30px auto;
       padding: 0 15px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start; /* Para que la imagen esté totalmente a la derecha */
       align-items: center;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
       color: #ffb1c1;
@@ -105,6 +105,7 @@
       border-radius: 15px;
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
+      margin-left: auto; /* Empuja la imagen al extremo derecho */
     }
     @media screen and (max-width: 480px) {
       header {
