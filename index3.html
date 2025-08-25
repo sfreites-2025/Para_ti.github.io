@@ -16,7 +16,7 @@
       font-family: 'Merriweather', serif;
       background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
       color: white;
-      overflow: hidden; /* para controlar scroll en el div principal */
+      overflow: hidden; /* controlar scroll en div */
     }
     header {
       position: fixed;
@@ -73,6 +73,14 @@
       font-size: 1.2em;
       line-height: 1.6;
     }
+    hr.separator {
+      border: none;
+      height: 3px;
+      background-color: rgba(219, 58, 115, 0.8);
+      margin: 30px auto;
+      width: 60%;
+      border-radius: 3px;
+    }
     @media screen and (max-width: 480px) {
       header {
         height: 60px;
@@ -86,6 +94,9 @@
         font-size: 1em;
         max-width: 90%;
       }
+      hr.separator {
+        width: 80%;
+      }
     }
   </style>
 </head>
@@ -97,7 +108,8 @@
     <p>
       Nuestros nombres comienzan con la misma letra, S y S... no sé si será destino o simple casualidad, pero si así lo es, quiero descubrir más de esas pequeñas señales en ti. Quiero encontrar en cada gesto, en cada sonrisa, más pistas que confirmen que estamos destinados a cruzar estos caminos. Porque a veces, las casualidades más pequeñas se convierten en las historias más grandes. Y yo quiero vivir esa historia contigo.
     </p>
-    <!-- Aquí puedes agregar más contenido para extensión -->
+    <hr class="separator" />
+    <!-- Aquí más contenido si quieres -->
   </main>
 </body>
 </html>
