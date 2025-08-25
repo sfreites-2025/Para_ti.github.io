@@ -31,6 +31,43 @@
       align-items: center;
       position: relative;
     }
+    /* Animación para elemento fadeInUp */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Animación pulso para bloque animado */
+    @keyframes pulseAnimation {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(219, 58, 115, 0.8), 0 0 30px rgba(219, 58, 115, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(219, 58, 115, 1), 0 0 40px rgba(255, 171, 185, 0.7);
+      }
+    }
+    /* Animación scaleIn para botón */
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    /* Animación fadeIn para párrafos */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
     h1 {
       font-size: 2.5em;
       font-weight: 700;
@@ -41,6 +78,7 @@
       border-radius: 12px;
       display: inline-block;
       box-shadow: 0 0 8px rgba(219, 58, 115, 0.8);
+      animation: fadeInUp 1s ease forwards;
     }
     /* Título pequeño debajo de la línea */
     h2.song-title {
@@ -50,6 +88,10 @@
       margin: 20px 0 15px 0;
       color: #ffabb9;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.9);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.9s;
+      opacity: 0;
+      animation-fill-mode: forwards;
     }
     /* Nueva tipografía aplicada sólo a estos párrafos */
     .custom-font {
@@ -59,7 +101,14 @@
       margin: 15px 0;
       line-height: 1.6;
       text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
     }
+    /* Animar cada párrafo con delay */
+    .custom-font:nth-child(1) {animation-delay: 0.5s;}
+    .custom-font:nth-child(2) {animation-delay: 0.7s;}
+    .custom-font:nth-child(3) {animation-delay: 0.9s;}
+    
     p {
       font-size: 1.2em;
       max-width: 360px;
@@ -76,6 +125,9 @@
       max-width: 100%;
       flex-wrap: nowrap;
       width: 100%;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 1.1s;
     }
     .side-text {
       max-width: 55%;
@@ -107,7 +159,13 @@
       margin: 30px auto;
       width: 60%;
       border-radius: 2px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
     }
+    /* Animar separadores con delay */
+    .separator:nth-of-type(1) {animation-delay: 1.3s;}
+    .separator:nth-of-type(2) {animation-delay: 2.9s;}
+    .separator:nth-of-type(3) {animation-delay: 5.3s;}
     /* Estilo para el texto de la canción */
     .song-text {
       font-family: 'Merriweather', serif;
@@ -120,6 +178,9 @@
       color: #ffd6e3;
       text-align: center;
       padding: 0 10px;
+      opacity: 0;
+      animation: fadeIn 1.4s ease forwards;
+      animation-delay: 1.5s;
     }
     /* Estilo para el nuevo bloque con animación */
     .animation-box {
@@ -137,13 +198,23 @@
       position: relative;
       overflow: hidden;
       animation: pulseAnimation 3s ease-in-out infinite;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
+      animation-name: pulseAndFadeIn;
     }
-    @keyframes pulseAnimation {
-      0%, 100% {
-        box-shadow: 0 0 20px rgba(219, 58, 115, 0.8), 0 0 30px rgba(219, 58, 115, 0.4);
+    @keyframes pulseAndFadeIn {
+      0% {
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(219, 58, 115, 0);
       }
       50% {
+        opacity: 1;
         box-shadow: 0 0 30px rgba(219, 58, 115, 1), 0 0 40px rgba(255, 171, 185, 0.7);
+      }
+      100% {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(219, 58, 115, 0.8), 0 0 30px rgba(219, 58, 115, 0.4);
       }
     }
     .animation-box h3 {
@@ -164,6 +235,9 @@
       border: 2px solid #ffabc1;
       border-radius: 10px;
       transition: background-color 0.3s ease, color 0.3s ease;
+      animation: fadeIn 1.3s ease forwards;
+      animation-delay: 3.2s;
+      opacity: 0;
     }
     .animation-box a:hover {
       background-color: #ffabc1;
@@ -176,6 +250,9 @@
       text-align: center;
       margin-top: 20px;
       margin-bottom: 40px;
+      opacity: 0;
+      animation: scaleIn 0.7s ease forwards;
+      animation-delay: 3.7s;
     }
     .button-container button {
       background-color: #db3a73;
@@ -200,6 +277,9 @@
       color: #ffccd9;
       font-size: 1em;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 4.3s;
     }
     @media screen and (max-width: 480px) {
       h1 {
@@ -269,15 +349,9 @@
     <h1>Siempre te recordé gracias al Ferxxoooo!</h1>
 
     <!-- Párrafos con tipografía diferente -->
-    <p class="custom-font">
-      Cada vez que sentía que necesitaba salir de mi zona, es tu imagen la que aparecía en mi mente, recordándome el amor y cariño que me diste, justo lo que siempre necesité.
-    </p>
-    <p class="custom-font">
-      Y no solo eso, cuando suena tu cantante favorito, es como si el tiempo se detuviera y volviera a revivir todo lo que significaste para mí.
-    </p>
-    <p class="custom-font">
-      Fuiste esa mujer que me quiso de verdad, con un amor sincero que dejó huella en mi corazón, y por eso te llevo siempre conmigo, en cada pensamiento y en cada emoción.
-    </p>
+    <p class="custom-font">Cada vez que sentía que necesitaba salir de mi zona, es tu imagen la que aparecía en mi mente, recordándome el amor y cariño que me diste, justo lo que siempre necesité.</p>
+    <p class="custom-font">Y no solo eso, cuando suena tu cantante favorito, es como si el tiempo se detuviera y volviera a revivir todo lo que significaste para mí.</p>
+    <p class="custom-font">Fuiste esa mujer que me quiso de verdad, con un amor sincero que dejó huella en mi corazón, y por eso te llevo siempre conmigo, en cada pensamiento y en cada emoción.</p>
 
     <div class="text-image-row">
       <div class="side-text">
@@ -294,21 +368,21 @@
 
     <!-- Texto de la canción -->
     <p class="song-text">
-Yo que creía que nunca iba a encontrar
-Un amor tan puro y real,
-Y de repente, apareciste tú,
-Con tu sonrisa que cambió mi mundo.
-“Nadie es perfecto,” pensaba yo,
-Hasta que te conocí y entendí que la perfección es solo una excusa,
-Porque contigo, todo tiene sentido.
-Habrá quienes duden y digan
-“Una vida entera es mucho tiempo,”
-Pero si es contigo, jamás será suficiente,
-Aunque pasen los años y cambie el color de mi cabello,
-Aunque nuestros cuerpos se cansen y nos llamen abuelos,
-Hasta ese día, hasta siempre,
-A tu lado quiero estar,
-Porque amarte es mi destino y quedarme contigo, mi única promesa.Nada es perfecto hasta que te conocí y descubrí que en tus imperfecciones reside toda la belleza que siempre busqué. Cada vez que necesitaba salir de mi zona, recordaba tu amor y cariño, justo lo que siempre necesité. Como dice una canción que sé, pensé que nunca estaría enamorado de nadie más, y de repente llegaste tú. Nadie es perfecto, hasta que un día te conocí, y qué buena suerte fue encontrarte. Habrá quienes digan que “toda una vida es exagerar,” pero si es contigo, el tiempo siempre será poco. Hasta que los años nos pinten las manos y nos llamen abuelos, hasta ese día me quedaré contigo, porque eres el amor verdadero que me cambió la vida.
+      Yo que creía que nunca iba a encontrar
+      Un amor tan puro y real,
+      Y de repente, apareciste tú,
+      Con tu sonrisa que cambió mi mundo.
+      “Nadie es perfecto,” pensaba yo,
+      Hasta que te conocí y entendí que la perfección es solo una excusa,
+      Porque contigo, todo tiene sentido.
+      Habrá quienes duden y digan
+      “Una vida entera es mucho tiempo,”
+      Pero si es contigo, jamás será suficiente,
+      Aunque pasen los años y cambie el color de mi cabello,
+      Aunque nuestros cuerpos se cansen y nos llamen abuelos,
+      Hasta ese día, hasta siempre,
+      A tu lado quiero estar,
+      Porque amarte es mi destino y quedarme contigo, mi única promesa.Nada es perfecto hasta que te conocí y descubrí que en tus imperfecciones reside toda la belleza que siempre busqué. Cada vez que necesitaba salir de mi zona, recordaba tu amor y cariño, justo lo que siempre necesité. Como dice una canción que sé, pensé que nunca estaría enamorado de nadie más, y de repente llegaste tú. Nadie es perfecto, hasta que un día te conocí, y qué buena suerte fue encontrarte. Habrá quienes digan que “toda una vida es exagerar,” pero si es contigo, el tiempo siempre será poco. Hasta que los años nos pinten las manos y nos llamen abuelos, hasta ese día me quedaré contigo, porque eres el amor verdadero que me cambió la vida.
     </p>
 
     <!-- Segundo separador moderado -->
