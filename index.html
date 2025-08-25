@@ -77,6 +77,8 @@
             animation-delay: 0.7s;
         }
         .menu-item {
+            display: flex;
+            align-items: center;
             background: linear-gradient(135deg, #f8a5c2, #c56cf0);
             color: white;
             padding: 20px 25px;
@@ -90,6 +92,7 @@
             user-select: none;
             transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             border: 2px solid #db3a73;
+            text-decoration: none;
         }
         .menu-item:hover,
         .menu-item:focus {
@@ -98,6 +101,13 @@
             background: linear-gradient(135deg, #ffa6cf, #d27cff);
             outline: none;
             border-color: #f06292;
+        }
+        .menu-icon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 1.5em;
+            color: #ff4668;
+            user-select: none;
         }
     </style>
 </head>
@@ -110,9 +120,15 @@
         <main>
             <p class="bienvenida">Hola, quería decirte que desde que te conozco, mi día es más brillante. ❤️</p>
             <nav class="lobby-menu" aria-label="Menú principal">
-                <a href="index2.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Tu">Tu</a>
-                <a href="index3.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Nosotros">Nosotros</a>
-                <a href="index4.html" class="menu-item" tabindex="0" role="button" aria-label="Sección ¿Si?">¿Si?</a>
+                <a href="index2.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Tu">
+                    <span class="menu-icon">❤️</span> Tu
+                </a>
+                <a href="index3.html" class="menu-item" tabindex="0" role="button" aria-label="Sección Nosotros">
+                    Nosotros
+                </a>
+                <a href="index4.html" class="menu-item" tabindex="0" role="button" aria-label="Sección ¿Si?">
+                    ¿Si?
+                </a>
             </nav>
         </main>
     </div>
