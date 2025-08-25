@@ -71,9 +71,6 @@
       font-size: 1.2em;
       line-height: 1.6;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     hr.separator {
       border: none;
@@ -82,10 +79,10 @@
       margin: 30px auto;
       width: 60%;
       border-radius: 3px;
-      width: 80%;
-      max-width: 700px;
     }
     .text-image-column {
+      display: flex;
+      flex-direction: column;
       max-width: 700px;
       margin: 30px auto;
       padding: 0 15px;
@@ -93,15 +90,12 @@
       font-size: 1.3em;
       line-height: 1.5;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.7);
-      display: flex;
-      flex-direction: column;
       align-items: center;
       gap: 15px;
-      text-align: center;
-      width: 100%;
     }
     .text-image-column .left-text {
       width: 100%;
+      text-align: center;
     }
     .text-image-column .right-image {
       width: 70vw;
@@ -110,12 +104,13 @@
       border: 3px solid #db3a73;
       box-shadow: 0 0 10px rgba(219, 58, 115, 0.7);
     }
-    .graduada-text, .flor-text, .nueva-text {
+    .graduada-text {
       font-size: 1.5em;
       margin: 25px 0 10px 0;
       color: #ffabc1;
       text-shadow: 0 0 8px rgba(219, 58, 115, 0.9);
     }
+
     @media screen and (max-width: 480px) {
       header {
         height: 60px;
@@ -130,15 +125,15 @@
         max-width: 90%;
       }
       hr.separator {
-        width: 90%;
+        width: 80%;
       }
       .text-image-column .right-image {
         width: 90vw;
         max-width: 280px;
       }
-      .graduada-text, .flor-text, .nueva-text {
+      .graduada-text {
         font-size: 1.3em;
-        margin: 20px 0 8px;
+        margin: 20px 0 8px 0;
       }
     }
   </style>
@@ -151,22 +146,17 @@
     <p>
       Nuestros nombres comienzan con la misma letra, S y S... no sé si será destino o simple casualidad, pero si así lo es, quiero descubrir más de esas pequeñas señales en ti. Quiero encontrar en cada gesto, en cada sonrisa, más pistas que confirmen que estamos destinados a cruzar estos caminos. Porque a veces, las casualidades más pequeñas se convierten en las historias más grandes. Y yo quiero vivir esa historia contigo.
     </p>
-    <hr class="separator" /> <!-- nuevo separador aquí -->
+    <hr class="separator" />
     <div class="text-image-column">
       <div class="left-text">Enamorado totalmente de ti</div>
       <a href="https://ibb.co/Fks7kQjG" target="_blank" rel="noopener noreferrer">
         <img src="https://i.ibb.co/Fks7kQjG/Whats-App-Image-2025-08-25-at-12-47-16-PM.jpg" alt="Imagen" class="right-image" />
       </a>
     </div>
-    <hr class="separator" /> <!-- separador después de primera foto -->
+    <hr class="separator" />
     <div class="graduada-text">Mi graduada bella</div>
     <a href="https://ibb.co/SX30jfy1" target="_blank" rel="noopener noreferrer">
       <img src="https://i.ibb.co/SX30jfy1/Whats-App-Image-2025-08-25-at-12-47-14-PM.jpg" alt="Mi graduada bella" style="width:70vw; max-width:280px; border-radius: 15px; border: 3px solid #db3a73; box-shadow: 0 0 10px rgba(219, 58, 115, 0.7); margin: 10px auto; display: block;" />
-    </a>
-    <hr class="separator" /> <!-- separador despues de segunda foto -->
-    <div class="nueva-text">La flor mas bonita del jadin sos vos</div>
-    <a href="https://ibb.co/XfXbvRbp" target="_blank" rel="noopener noreferrer">
-      <img src="https://i.ibb.co/XfXbvRbp/Whats-App-Image-2025-08-25-at-12-47-00-PM.jpg" alt="Flor mas bonita del jardin" style="width:70vw; max-width:280px; border-radius: 15px; border: 3px solid #db3a73; box-shadow: 0 0 10px rgba(219, 58, 115, 0.7); margin: 10px auto 40px auto; display: block;" />
     </a>
   </main>
 </body>
